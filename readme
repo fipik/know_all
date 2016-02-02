@@ -1,0 +1,35 @@
+HERE'S WHAT I DID
+SRC: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+REPO: https://github.com/AllenDowney/ThinkStats2/tree/master/code
+git init
+git add .
+
+
+
+
+---------------------------------
+GIT
+GIT INIT (creates a working directory too) == non-bare
+Repositories created with the git init command are called working directories. In the top level folder of the repository you will find two things: A .git subfolder with all the git related revision history of your repo AND A working tree, or checked out copies of your project files.
+--BARE 
+- more space efficient since it has no working tree
+- bare repos store git revision history of your repo in the root folder of your repository instead of in a .git subfolder
+- customarily, bare repositories are customarily given a .git extension
+WHEN BARE WHEN NOT?
+- a working repository created with git init is for !working!
+- a bare repository created with git init --bare is for sharing
+- you will want to create a bare repository in centralized place where all users can push their changes (often the easy choice is github.com).
+- no one will directly edit files in the shared centralized repository? huh? so how do they make changes?
+- Aha! Instead developers will clone the shared bare repo, make changes LOCALLY in their working copies of the repo, then push back to the shared bare repo to make their changes available to other users THEREFORE a working tree is not needed
+---------------------------------
+WHY? Warning: Never git add, commit, or push sensitive information to a remote repository.
+---------------------------------
+Here is an example of my workflow:
+1. develop locally on a working repo, commit
+2. push to shared bare repository
+---------------------------------
+SPARK (from the London guy (with Polish surname))
+INTRO
+---------------------------------
+LATEX
+https://github.com/AllenDowney/ThinkStats2/tree/master/book
